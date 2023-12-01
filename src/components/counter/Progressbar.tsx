@@ -22,6 +22,11 @@ export default function ProgressBar() {
     secs = totalSeconds % 60;
     mins = Math.floor(totalSeconds / 60);
   }
+  if (status === "paused") {
+    const totalSeconds = Math.floor(timerProgress / 1000);
+    secs = totalSeconds % 60;
+    mins = Math.floor(totalSeconds / 60);
+  }
 
   if (status === "breakStarted") {
     return (
